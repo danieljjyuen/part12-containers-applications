@@ -1,0 +1,157 @@
+Script started on 2023-12-27 14:37:55-05:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="106" LINES="21"]
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/script-answers[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/script-answers[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS                     NAMES
+0fd7bb295477   mongo     "docker-entrypoint.s…"   57 seconds ago      Up 56 seconds      0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+f9d4455d47cf   nginx     "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp      stupefied_buck
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/script-answers[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/script-answers[00m$ docker exec -it todo-backend-mong o-1 mongosh -u -p
+]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	658c7dc3366e69cbf2a3e157
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1[0m
+Using MongoDB:		7.0.4
+[1m[33mUsing Mongosh[0m:		2.1.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1G[0Jtest> [7Gshow dbs
+Uncaught [1m[31mMongoServerError[0m: Command listDatabases requires authentication
+[1G[0Jtest> [7Guse [1G[0Jtest> use[10G[1G[0Jtest> us[9G[1G[0Jtest> u[8G[1G[0Jtest> [7G-u [1G[0Jtest> -u[9G[1G[0Jtest> -[8G[1G[0Jtest> [7G-u root -p example
+Uncaught:
+[1m[31mSyntaxError[0m: Missing semicolon. (1:2)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33m-[39mu root [33m-[39mp example[0m
+[0m [90m   |[39m   [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m[0m
+
+[1G[0Jtest> [7G
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+[1G[0Jtest> [7Gexit
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/script-answers[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/script-answers[00m$ docker exec -it todo-backend-mongo-1 mongosh -u -pr-po-po-pt-p -p[C[C example
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	658c7e27c5d1d0e821b3e02d
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1[0m
+Using MongoDB:		7.0.4
+[1m[33mUsing Mongosh[0m:		2.1.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-12-27T19:38:41.434+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-12-27T19:38:42.151+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2023-12-27T19:38:42.151+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Grun dbs
+Uncaught:
+[1m[31mSyntaxError[0m: Missing semicolon. (1:3)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m run dbs[0m
+[0m [90m   |[39m    [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m[0m
+
+[1G[0Jtest> [7Gshow dun[1G[0Jtest> show du[14G[1G[0Jtest> show d[13Gbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         12.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gtodos_find({)[1G[0Jthe_database> todos_find({[27G})
+Uncaught [1m[31mReferenceError[0m: todos_find is not defined
+[1G[0Jthe_database> [15Gdb.todos_find({})
+Uncaught [1m[31mTypeError[0m: db.todos_find is not a function
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos_find({})[32G[1G[0Jthe_database> todos_find({})[29G[1D[1G[0Jthe_database> todos_find[44m([49m{})[28G[1D[1G[0Jthe_database> todos_find([44m{[49m})[27G[1D[1G[0Jthe_database> todos_find({[44m}[49m)[26G[1D[1G[0Jthe_database> todos_find({}[44m)[49m[25G[1D[1G[0Jthe_database> todos_find({})[24G[1D[1D[1D[1G[0Jthe_database> todosfind({})[20G[1G[0Jthe_database> todos.find({})[21G[8C
+Uncaught [1m[31mReferenceError[0m: todos is not defined
+[1G[0Jthe_database> [15G[1G[0Jthe_database> todos.find({})[29G[4D[1G[0Jthe_database> todos.find({}[44m)[49m[25G[4D[1G[0Jthe_database> todos.find({})[21G[1D[5D[1G[0Jthe_database> dtodos.find({})[16G[1G[0Jthe_database> dbtodos.find({})[17G[1G[0Jthe_database> db.todos.find({})[18G[14C
+[
+  {
+    _id: ObjectId([32m'658c7d400073b9b253b35cf1'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'658c7d400073b9b253b35cf2'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gd.[1G[0Jthe_database> d[16Gb.todos.insertOne({text[33mtext[39m:[32m"[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m:[40G[32m'[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m'[39m, d[36mdo[39mdone: fals[33mfalse[39m})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'658c7eabc5d1d0e821b3e02e'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m:[32m'Increase the number of tools in my toolbelt'[39m, [33mdone[39m: [33mfalse[39m})[100G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'658c7d400073b9b253b35cf1'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'658c7d400073b9b253b35cf2'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'658c7eabc5d1d0e821b3e02e'[39m),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/script-answers[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/script-answers[00m$ c [Kd ..
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ cd [K[K[Kls
+[0m[01;34mscript-answers[0m  [01;34mtodo-app[0m
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add .
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+fatal: adding files failed
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git commit - 'part[K[K[K[K[K[Km 'part 12 exzercise[K[K[K[K[K[K[Kercise 12.8'
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   script-answers/exercise12_2.txt[m
+	[31mmodified:   script-answers/exercise12_3.txt[m
+	[31mmodified:   script-answers/exercise12_4.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mscript-answers/exercise12_8.txt[m
+	[31mtodo-app/todo-backend/mongo_data/[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add .
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+fatal: adding files failed
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git push -u origin main
+Username for 'https://github.com': danieljjyuen
+Password for 'https://danieljjyuen@github.com': 
+Enumerating objects: 22, done.
+Counting objects:   4% (1/22)Counting objects:   9% (2/22)Counting objects:  13% (3/22)Counting objects:  18% (4/22)Counting objects:  22% (5/22)Counting objects:  27% (6/22)Counting objects:  31% (7/22)Counting objects:  36% (8/22)Counting objects:  40% (9/22)Counting objects:  45% (10/22)Counting objects:  50% (11/22)Counting objects:  54% (12/22)Counting objects:  59% (13/22)Counting objects:  63% (14/22)Counting objects:  68% (15/22)Counting objects:  72% (16/22)Counting objects:  77% (17/22)Counting objects:  81% (18/22)Counting objects:  86% (19/22)Counting objects:  90% (20/22)Counting objects:  95% (21/22)Counting objects: 100% (22/22)Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects:   8% (1/12)Compressing objects:  16% (2/12)Compressing objects:  25% (3/12)Compressing objects:  33% (4/12)Compressing objects:  41% (5/12)Compressing objects:  50% (6/12)Compressing objects:  58% (7/12)Compressing objects:  66% (8/12)Compressing objects:  75% (9/12)Compressing objects:  83% (10/12)Compressing objects:  91% (11/12)Compressing objects: 100% (12/12)Compressing objects: 100% (12/12), done.
+Writing objects:   8% (1/12)Writing objects:  16% (2/12)Writing objects:  25% (3/12)Writing objects:  41% (5/12)Writing objects:  50% (6/12)Writing objects:  58% (7/12)Writing objects:  66% (8/12)Writing objects:  75% (9/12)Writing objects:  83% (10/12)Writing objects:  91% (11/12)Writing objects: 100% (12/12)Writing objects: 100% (12/12), 63.87 KiB | 2.66 MiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)[Kremote: Resolving deltas:  16% (1/6)[Kremote: Resolving deltas:  33% (2/6)[Kremote: Resolving deltas:  50% (3/6)[Kremote: Resolving deltas:  66% (4/6)[Kremote: Resolving deltas:  83% (5/6)[Kremote: Resolving deltas: 100% (6/6)[Kremote: Resolving deltas: 100% (6/6), completed with 4 local objects.[K
+To https://github.com/danieljjyuen/part12-containers-applications.git
+   3ba45b3..c6a6cf7  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ ls
+[0m[01;34mscript-answers[0m  [01;34mtodo-app[0m
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add .
+warning: could not open directory 'todo-app/
