@@ -5653,4 +5653,535 @@ CastError: Cast to ObjectId failed for value "http:" (type string) at path "_id"
 [32m[nodemon] starting `node ./bin/www`[39m
 [0mGET /todos/658b5f46d3dd1f8075ec2f23 [32m200 [0m74.080 ms - 79[0m
 [0mPUT /todos/658b5f46d3dd1f8075ec2f23 [33m405 [0m84.781 ms - 18[0m
-[32m[nodemon] restarting due 
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+/home/dan/src/part12-containers-applications/todo-app/todo-backend/node_modules/express/lib/response.js:1119
+    : JSON.stringify(value);
+           ^
+
+TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/response.js:1119:12[90m)[39m
+    at ServerResponse.json [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/response.js:260:14[90m)[39m
+    at [90m/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mroutes/todos.js:45:7
+    at Layer.handle [as handle_request] [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/layer.js:95:5[90m)[39m
+    at next [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/route.js:137:13[90m)[39m
+    at Route.dispatch [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/route.js:112:3[90m)[39m
+    at Layer.handle [as handle_request] [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/layer.js:95:5[90m)[39m
+    at [90m/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:281:22
+    at Function.process_params [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:335:12[90m)[39m
+    at next [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:275:10[90m)[39m
+    at Function.handle [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:174:3[90m)[39m
+    at router [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:47:12[90m)[39m
+    at Layer.handle [as handle_request] [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/layer.js:95:5[90m)[39m
+    at trim_prefix [90m(/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:317:13[90m)[39m
+    at [90m/home/dan/src/part12-containers-applications/todo-app/todo-backend/[39mnode_modules/[4mexpress[24m/lib/router/index.js:284:7
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+(node:12415) DeprecationWarning: Mongoose: `findOneAndUpdate()` and `findOneAndDelete()` without the `useFindAndModify` option set to false are deprecated. See: https://mongoosejs.com/docs/deprecations.html#findandmodify
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[0mPUT /todos/658b5f46d3dd1f8075ec2f23 [32m200 [0m159.966 ms - 79[0m
+[0mGET /todos/658b5f46d3dd1f8075ec2f23 [32m200 [0m22.344 ms - 79[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+^C
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker ru[K[Kcontainers ls -a
+unknown shorthand flag: 'a' in -a
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.12.0-desktop.2)
+  compose*    Docker Compose (Docker Inc., v2.23.3-desktop.2)
+  container   Manage containers
+  context     Manage contexts
+  dev*        Docker Dev Environments (Docker Inc., v0.1.0)
+  extension*  Manages Docker extensions (Docker Inc., v0.2.21)
+  feedback*   Provide feedback, right in your terminal! (Docker Inc., 0.1)
+  image       Manage images
+  init*       Creates Docker-related starter files for your project (Docker Inc., v0.1.0-beta.10)
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.26.0)
+  scout*      Docker Scout (Docker Inc., v1.2.0)
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/home/dan/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set
+                           with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/dan/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/dan/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/dan/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker container ls -a
+CONTAINER ID   IMAGE                COMMAND                  CREATED        STATUS                      PORTS                     NAMES
+9fde22556f07   mongo                "docker-entrypoint.s…"   19 hours ago   Up 19 hours                 0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+debc79686c14   todo-backend-image   "docker-entrypoint.s…"   23 hours ago   Exited (137) 23 hours ago                             todo-backend-app-1
+96ad2f223619   express-server       "docker-entrypoint.s…"   23 hours ago   Exited (137) 23 hours ago                             create_image-app-1
+8dfc699f4afd   19a85e97f1bc         "docker-entrypoint.s…"   25 hours ago   Exited (137) 25 hours ago                             reverent_bardeen
+ed58b4fed702   8a43dfc95123         "docker-entrypoint.s…"   25 hours ago   Exited (137) 25 hours ago                             gracious_galois
+0e059049c740   a86c98327e4d         "docker-entrypoint.s…"   26 hours ago   Exited (137) 26 hours ago                             sleepy_easley
+cf9aa8005910   fs-hello-world       "docker-entrypoint.s…"   27 hours ago   Exited (0) 27 hours ago                               dreamy_dirac
+550ccfba7280   node:16              "docker-entrypoint.s…"   4 days ago     Exited (0) 4 days ago                                 hello-node
+98e21e4a0fe7   hello-node-world     "bash"                   4 days ago     Exited (0) 4 days ago                                 admiring_shirley
+3a87ff88cab5   hello-node-world     "bash"                   4 days ago     Exited (127) 4 days ago                               nervous_cray
+b370a0bed8f2   hello-world          "/hello"                 5 days ago     Exited (0) 5 days ago                                 quirky_kirch
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker stop todo-backend-mongo-1
+todo-backend-mongo-1
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker stop todo-backend-mongo-1[10Pcontainer ls -a
+CONTAINER ID   IMAGE                COMMAND                  CREATED        STATUS                      PORTS     NAMES
+9fde22556f07   mongo                "docker-entrypoint.s…"   19 hours ago   Exited (0) 3 seconds ago              todo-backend-mongo-1
+debc79686c14   todo-backend-image   "docker-entrypoint.s…"   23 hours ago   Exited (137) 23 hours ago             todo-backend-app-1
+96ad2f223619   express-server       "docker-entrypoint.s…"   23 hours ago   Exited (137) 23 hours ago             create_image-app-1
+8dfc699f4afd   19a85e97f1bc         "docker-entrypoint.s…"   25 hours ago   Exited (137) 25 hours ago             reverent_bardeen
+ed58b4fed702   8a43dfc95123         "docker-entrypoint.s…"   25 hours ago   Exited (137) 25 hours ago             gracious_galois
+0e059049c740   a86c98327e4d         "docker-entrypoint.s…"   26 hours ago   Exited (137) 26 hours ago             sleepy_easley
+cf9aa8005910   fs-hello-world       "docker-entrypoint.s…"   27 hours ago   Exited (0) 27 hours ago               dreamy_dirac
+550ccfba7280   node:16              "docker-entrypoint.s…"   4 days ago     Exited (0) 4 days ago                 hello-node
+98e21e4a0fe7   hello-node-world     "bash"                   4 days ago     Exited (0) 4 days ago                 admiring_shirley
+3a87ff88cab5   hello-node-world     "bash"                   4 days ago     Exited (127) 4 days ago               nervous_cray
+b370a0bed8f2   hello-world          "/hello"                 5 days ago     Exited (0) 5 days ago                 quirky_kirch
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker container run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+
+[1A[2Kaf107e978371: Pulling fs layer [1B
+[1A[2K336ba1f05c3e: Pulling fs layer [1B
+[1A[2K8c37d2ff6efa: Pulling fs layer [1B
+[1A[2K51d6357098de: Pulling fs layer [1B
+[1A[2K782f1ecce57d: Pulling fs layer [1B[2A[2K51d6357098de: Waiting [2B
+[1A[2K5e99d351b073: Pulling fs layer [1B[2A[2K782f1ecce57d: Waiting [2B
+[1A[2K7b73345df136: Pulling fs layer [1B[2A[2K5e99d351b073: Waiting [2B[1A[2K7b73345df136: Waiting [1B[5A[2K8c37d2ff6efa: Downloading [==================================================>]     628B/628B[5B[5A[2K8c37d2ff6efa: Verifying Checksum [5B[5A[2K8c37d2ff6efa: Download complete [5B[6A[2K336ba1f05c3e: Downloading [>                                                  ]  424.3kB/41.37MB[6B[7A[2Kaf107e978371: Downloading [>                                                  ]  297.3kB/29.13MB[7B[7A[2Kaf107e978371: Downloading [=>                                                 ]  895.3kB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=>                                                 ]  1.276MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===>                                               ]  1.792MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==>                                                ]  2.124MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [====>                                              ]  2.677MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===>                                               ]  2.976MB/41.37MB[6B[4A[2K51d6357098de: Downloading [=====================================>             ]     721B/955B[4B[4A[2K51d6357098de: Downloading [==================================================>]     955B/955B[4B[4A[2K51d6357098de: Verifying Checksum [4B[4A[2K51d6357098de: Download complete [4B[7A[2Kaf107e978371: Downloading [======>                                            ]  3.574MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [====>                                              ]  3.828MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=======>                                           ]  4.459MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=====>                                             ]  4.684MB/41.37MB[6B[3A[2K782f1ecce57d: Downloading [==================================================>]     365B/365B[3B[3A[2K782f1ecce57d: Verifying Checksum [3B[3A[2K782f1ecce57d: Download complete [3B[7A[2Kaf107e978371: Downloading [========>                                          ]  5.065MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [======>                                            ]   5.54MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [==========>                                        ]   5.95MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=======>                                           ]  6.388MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===========>                                       ]   6.54MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [========>                                          ]  6.814MB/41.37MB[6B[2A[2K5e99d351b073: Downloading [=============================>                     ]     720B/1.211kB[2B[2A[2K5e99d351b073: Downloading [==================================================>]  1.211kB/1.211kB[2B[2A[2K5e99d351b073: Verifying Checksum [2B[2A[2K5e99d351b073: Download complete [2B[7A[2Kaf107e978371: Downloading [============>                                      ]  7.129MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=========>                                         ]  7.662MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=============>                                     ]  7.719MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [==============>                                    ]  8.309MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==========>                                        ]  8.518MB/41.37MB[6B[1A[2K7b73345df136: Downloading [=========================>                         ]     720B/1.399kB[1B[1A[2K7b73345df136: Downloading [==================================================>]  1.399kB/1.399kB[1B[1A[2K7b73345df136: Verifying Checksum [1B[1A[2K7b73345df136: Download complete [1B[7A[2Kaf107e978371: Downloading [===============>                                   ]  8.899MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===========>                                       ]  9.354MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [================>                                  ]  9.489MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [=================>                                 ]  10.09MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [============>                                      ]  10.19MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [==================>                                ]  10.68MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=============>                                     ]  11.05MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===================>                               ]  11.27MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [====================>                              ]  11.86MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==============>                                    ]  11.89MB/41.37MB[6B[6A[2K336ba1f05c3e: Downloading [===============>                                   ]  12.73MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=====================>                             ]  12.75MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [================>                                  ]  13.58MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=======================>                           ]  13.63MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=================>                                 ]  14.43MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [========================>                          ]  14.51MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [=========================>                         ]  15.12MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==================>                                ]  15.28MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [==========================>                        ]  15.71MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===================>                               ]  16.13MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===========================>                       ]  16.31MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [====================>                              ]  16.56MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=============================>                     ]   16.9MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=====================>                             ]  17.41MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [==============================>                    ]  17.49MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [======================>                            ]  18.26MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===============================>                   ]  18.08MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=======================>                           ]   19.1MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [================================>                  ]  18.97MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [========================>                          ]  19.95MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [==================================>                ]  19.85MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=========================>                         ]  20.79MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===================================>               ]  20.44MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [====================================>              ]  21.03MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==========================>                        ]  21.64MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=====================================>             ]  21.62MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===========================>                       ]  22.48MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [======================================>            ]  22.21MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [============================>                      ]  23.33MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=======================================>           ]   23.1MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [========================================>          ]  23.69MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=============================>                     ]  24.18MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [==========================================>        ]  24.57MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==============================>                    ]  25.03MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===========================================>       ]  25.46MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===============================>                   ]  25.88MB/41.37MB[6B[6A[2K336ba1f05c3e: Downloading [================================>                  ]  26.72MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [=============================================>     ]  26.34MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [==============================================>    ]  26.93MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=================================>                 ]  27.58MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [===============================================>   ]  27.53MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [==================================>                ]  28.42MB/41.37MB[6B[7A[2Kaf107e978371: Downloading [================================================>  ]  28.13MB/29.13MB[7B[7A[2Kaf107e978371: Downloading [=================================================> ]  28.72MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===================================>               ]  29.27MB/41.37MB[6B[7A[2Kaf107e978371: Download complete [7B[6A[2K336ba1f05c3e: Downloading [====================================>              ]  30.13MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [>                                                  ]  294.9kB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=====================================>             ]  30.98MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [====>                                              ]  2.359MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [======================================>            ]  31.83MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [=======>                                           ]  4.424MB/29.13MB[7B[7A[2Kaf107e978371: Extracting [=============>                                     ]  7.668MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [========================================>          ]  33.11MB/41.37MB[6B[6A[2K336ba1f05c3e: Downloading [=========================================>         ]  34.39MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [================>                                  ]  9.732MB/29.13MB[7B[7A[2Kaf107e978371: Extracting [==================>                                ]  10.91MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===========================================>       ]  35.67MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [=======================>                           ]  13.57MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [============================================>      ]  36.94MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [==============================>                    ]  17.99MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [=============================================>     ]  37.79MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [======================================>            ]  22.41MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [===============================================>   ]  39.07MB/41.37MB[6B[7A[2Kaf107e978371: Extracting [==========================================>        ]  24.48MB/29.13MB[7B[6A[2K336ba1f05c3e: Downloading [================================================>  ]  40.34MB/41.37MB[6B[6A[2K336ba1f05c3e: Verifying Checksum [6B[6A[2K336ba1f05c3e: Download complete [6B[7A[2Kaf107e978371: Extracting [==========================================>        ]  24.77MB/29.13MB[7B[7A[2Kaf107e978371: Extracting [===============================================>   ]  27.72MB/29.13MB[7B[7A[2Kaf107e978371: Extracting [================================================>  ]  28.31MB/29.13MB[7B[7A[2Kaf107e978371: Extracting [==================================================>]  29.13MB/29.13MB[7B[7A[2Kaf107e978371: Pull complete [7B[6A[2K336ba1f05c3e: Extracting [>                                                  ]    426kB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [======>                                            ]  5.538MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [===========>                                       ]  9.798MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [===================>                               ]  15.76MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [==========================>                        ]  22.15MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [================================>                  ]  27.26MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [=======================================>           ]  32.37MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [===========================================>       ]  35.78MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [===============================================>   ]  39.19MB/41.37MB[6B[6A[2K336ba1f05c3e: Extracting [==================================================>]  41.37MB/41.37MB[6B[6A[2K336ba1f05c3e: Pull complete [6B[5A[2K8c37d2ff6efa: Extracting [==================================================>]     628B/628B[5B[5A[2K8c37d2ff6efa: Extracting [==================================================>]     628B/628B[5B[5A[2K8c37d2ff6efa: Pull complete [5B[4A[2K51d6357098de: Extracting [==================================================>]     955B/955B[4B[4A[2K51d6357098de: Extracting [==================================================>]     955B/955B[4B[4A[2K51d6357098de: Pull complete [4B[3A[2K782f1ecce57d: Extracting [==================================================>]     365B/365B[3B[3A[2K782f1ecce57d: Extracting [==================================================>]     365B/365B[3B[3A[2K782f1ecce57d: Pull complete [3B[2A[2K5e99d351b073: Extracting [==================================================>]  1.211kB/1.211kB[2B[2A[2K5e99d351b073: Extracting [==================================================>]  1.211kB/1.211kB[2B[2A[2K5e99d351b073: Pull complete [2B[1A[2K7b73345df136: Extracting [==================================================>]  1.399kB/1.399kB[1B[1A[2K7b73345df136: Extracting [==================================================>]  1.399kB/1.399kB[1B[1A[2K7b73345df136: Pull complete [1BDigest: sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
+Status: Downloaded newer image for nginx:latest
+b61f4f67298fd48126957a47a3746855c33237153ebbe323540abeef4d5ce474
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS     NAMES
+b61f4f67298f   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp    frosty_benz
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ c[Kdocker container stop frosty_benz
+frosty_benz
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker don[K[K[Kcontiner rm frosty_benz
+docker: 'continer' is not a docker command.
+See 'docker --help'
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker conainer[K[K[K[K[K[Kta[K[Kntainer rm frotsty[K[K[K[Ksty_benz
+frosty_benz
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker container run -d -p 8080:80 nginx
+f9d4455d47cfb33167b7d3bc82b07f5e7cdc7daf8d274905ffd367006b8cfc2f
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ co[K[Kdocker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                  NAMES
+f9d4455d47cf   nginx     "/docker-entrypoint.…"   9 seconds ago   Up 8 seconds   0.0.0.0:8080->80/tcp   stupefied_buck
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker i[Kcontainer ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                  NAMES
+f9d4455d47cf   nginx     "/docker-entrypoint.…"   27 minutes ago   Up 27 minutes   0.0.0.0:8080->80/tcp   stupefied_buck
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker exec -it stupi[Kefied_buck
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker exec -it stupefied_buck bash
+[?2004hroot@f9d4455d47cf:/# cd /user/   r/share/nginx/html/
+[?2004l[?2004hroot@f9d4455d47cf:/usr/share/nginx/html# ls
+[?2004l50x.html  index.html
+[?2004hroot@f9d4455d47cf:/usr/share/nginx/html# rm index.html
+[?2004l[?2004hroot@f9d4455d47cf:/usr/share/nginx/html# ls
+[?2004l50x.html
+[?2004hroot@f9d4455d47cf:/usr/share/nginx/html# [7mecho "Hello, exec!" > index.html[27mecho "Hello, exec!" > index.html
+[?2004l[?2004hroot@f9d4455d47cf:/usr/share/nginx/html# ^C[?2004l[?2004h[?2004l
+[?2004hroot@f9d4455d47cf:/usr/share/nginx/html# exit
+[?2004lexit
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker exec -it stupefied_buck bash[K[11Pcontainer lsrun -d -p 8080:80 nginxls[K
+CONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS       PORTS                  NAMES
+f9d4455d47cf   nginx     "/docker-entrypoint.…"   4 hours ago   Up 4 hours   0.0.0.0:8080->80/tcp   stupefied_buck
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker container stop stuped[Kfied_buck
+stupefied_buck
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker container ls -a
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                      PORTS     NAMES
+87e63973b997   redis:latest         "docker-entrypoint.s…"   57 minutes ago   Exited (0) 56 minutes ago             my-redis-container
+0fd7bb295477   mongo                "docker-entrypoint.s…"   3 hours ago      Exited (0) 56 minutes ago             todo-backend-mongo-1
+f9d4455d47cf   nginx                "/docker-entrypoint.…"   4 hours ago      Exited (0) 4 seconds ago              stupefied_buck
+debc79686c14   todo-backend-image   "docker-entrypoint.s…"   28 hours ago     Exited (137) 28 hours ago             todo-backend-app-1
+96ad2f223619   express-server       "docker-entrypoint.s…"   28 hours ago     Exited (137) 28 hours ago             create_image-app-1
+8dfc699f4afd   19a85e97f1bc         "docker-entrypoint.s…"   29 hours ago     Exited (137) 29 hours ago             reverent_bardeen
+ed58b4fed702   8a43dfc95123         "docker-entrypoint.s…"   29 hours ago     Exited (137) 29 hours ago             gracious_galois
+0e059049c740   a86c98327e4d         "docker-entrypoint.s…"   31 hours ago     Exited (137) 31 hours ago             sleepy_easley
+cf9aa8005910   fs-hello-world       "docker-entrypoint.s…"   32 hours ago     Exited (0) 32 hours ago               dreamy_dirac
+550ccfba7280   node:16              "docker-entrypoint.s…"   4 days ago       Exited (0) 4 days ago                 hello-node
+98e21e4a0fe7   hello-node-world     "bash"                   4 days ago       Exited (0) 4 days ago                 admiring_shirley
+3a87ff88cab5   hello-node-world     "bash"                   4 days ago       Exited (127) 4 days ago               nervous_cray
+b370a0bed8f2   hello-world          "/hello"                 6 days ago       Exited (0) 6 days ago                 quirky_kirch
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ j[Kdocker compose -f docker-compose.dev.yml down
+[1A[1B[0G[?25l[+] Running 0/0
+ ⠋ Container my-redis-container    Stopping                                                                                                [34m0.1s [0m
+ ⠋ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 0/2
+ ⠙ Container my-redis-container    Stopping                                                                                                [34m0.2s [0m
+ ⠙ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.2s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 0/2
+ ⠹ Container my-redis-container    Stopping                                                                                                [34m0.3s [0m
+ ⠹ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.3s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 0/2
+ ⠸ Container my-redis-container    Stopping                                                                                                [34m0.4s [0m
+ ⠸ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.4s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 0/2
+ ⠼ Container my-redis-container    Stopping                                                                                                [34m0.5s [0m
+ ⠼ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.5s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 0/2
+ ⠴ Container my-redis-container    Stopping                                                                                                [34m0.6s [0m
+ ⠴ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.6s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 0/2
+ ⠦ Container my-redis-container    Stopping                                                                                                [34m0.7s [0m
+ ⠦ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.7s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Container my-redis-container    [32mRemoved[0m                                                                                                 [34m0.7s [0m
+ ⠧ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.8s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+ [32m✔[0m Container my-redis-container    [32mRemoved[0m                                                                                                 [34m0.7s [0m
+ ⠇ Container todo-backend-mongo-1  Stopping                                                                                                [34m0.9s [0m
+[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
+ [32m✔[0m Container my-redis-container    [32mRemoved[0m                                                                                                 [34m0.7s [0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mStopped[0m                                                                                                 [34m0.9s [0m
+[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
+ [32m✔[0m Container my-redis-container    [32mRemoved[0m                                                                                                 [34m0.7s [0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mRemoved[0m                                                                                                 [34m0.9s [0m
+ ⠋ Network todo-backend_default    Removing                                                                                                [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Container my-redis-container    [32mRemoved[0m                                                                                                 [34m0.7s [0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mRemoved[0m                                                                                                 [34m0.9s [0m
+ ⠙ Network todo-backend_default    Removing                                                                                                [34m0.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Container my-redis-container    [32mRemoved[0m                                                                                                 [34m0.7s [0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mRemoved[0m                                                                                                 [34m0.9s [0m
+ [32m✔[0m Network todo-backend_default    [32mRemoved[0m                                                                                                 [34m0.2s [0m
+[?25h]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker compose -f docker-compose.dev.yml up
+[33mWARN[0m[0000] Found orphan containers ([todo-backend-app-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Network todo-backend_default    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ ⠋ Container my-redis-container    Creating                                                                                                [34m0.0s [0m
+ ⠋ Container todo-backend-mongo-1  Creating                                                                                                [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [32m✔[0m Network todo-backend_default    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ ⠙ Container my-redis-container    Creating                                                                                                [34m0.1s [0m
+ ⠙ Container todo-backend-mongo-1  Creating                                                                                                [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Network todo-backend_default    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ [32m✔[0m Container my-redis-container    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                                                                 [34m0.2s [0m
+[?25hAttaching to my-redis-container, mongo-1
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:36:31.053 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:36:31.054 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:36:31.054 * Redis version=7.2.3, bits=64, commit=00000000, modified=0, pid=1, just started
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:36:31.054 * Configuration loaded
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:36:31.054 * monotonic clock: POSIX clock_gettime
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:36:31.056 * Running mode=standalone, port=6379.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:36:31.057 * Server initialized
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:36:31.066 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:36:31.077 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:36:31.077 * Ready to accept connections tcp
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.238+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":21},"outgoing":{"minWireVersion":6,"maxWireVersion":21},"isInternalClient":true}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.241+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.245+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.251+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.251+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.251+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.252+00:00"},"s":"I",  "c":"TENANT_M", "id":7091600, "ctx":"main","msg":"Starting TenantMigrationAccessBlockerRegistry"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.252+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"35bec1d75bc8"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.252+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"7.0.4","gitVersion":"38f3e37057a43d2e9f41a39142681a76062d582e","openSSLVersion":"OpenSSL 3.0.2 15 Mar 2022","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2204","distarch":"x86_64","target_arch":"x86_64"}}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.252+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"22.04"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.252+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"},"security":{"authorization":"enabled"}}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.254+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.254+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:31.255+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=3407M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.342+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":1087}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.342+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.366+00:00"},"s":"W",  "c":"CONTROL",  "id":22178,   "ctx":"initandlisten","msg":"/sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'","tags":["startupWarnings"]}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.366+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":262144,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.370+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":21},"outgoing":{"minWireVersion":6,"maxWireVersion":21},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":21,"maxWireVersion":21},"outgoing":{"minWireVersion":21,"maxWireVersion":21},"isInternalClient":true}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.370+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"7.0","context":"startup"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.371+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.372+00:00"},"s":"I",  "c":"CONTROL",  "id":6608200, "ctx":"initandlisten","msg":"Initializing cluster server parameters from disk"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.372+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.376+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.382+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.382+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.383+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.383+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:32.383+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.778+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.21.0.1:49238","uuid":{"uuid":{"$uuid":"8f361bb7-21f9-42ca-a2f7-009db2bade3b"}},"connectionId":1,"connectionCount":1}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.784+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.21.0.1:49238","client":"conn1","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.102.1-microsoft-standard-WSL2"},"platform":"'Node.js v16.17.0, LE (unified)","version":"3.6.8|5.13.2"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.789+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.21.0.1:49242","uuid":{"uuid":{"$uuid":"a22055f7-7ce9-43e9-a32b-1fcbc7dbc81b"}},"connectionId":2,"connectionCount":2}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.791+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"172.21.0.1:49242","client":"conn2","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.102.1-microsoft-standard-WSL2"},"platform":"'Node.js v16.17.0, LE (unified)","version":"3.6.8|5.13.2"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.796+00:00"},"s":"I",  "c":"ACCESS",   "id":6788604, "ctx":"conn2","msg":"Auth metrics report","attr":{"metric":"acquireUser","micros":0}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.808+00:00"},"s":"I",  "c":"ACCESS",   "id":5286306, "ctx":"conn2","msg":"Successfully authenticated","attr":{"client":"172.21.0.1:49242","isSpeculative":true,"isClusterMember":false,"mechanism":"SCRAM-SHA-256","user":"the_username","db":"the_database","result":0,"metrics":{"conversation_duration":{"micros":11646,"summary":{"0":{"step":1,"step_total":2,"duration_micros":300},"1":{"step":2,"step_total":2,"duration_micros":105}}}},"extraInfo":{}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:36:53.809+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn2","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":1}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:04.299+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.21.0.1:49250","uuid":{"uuid":{"$uuid":"d832405f-923a-44c1-a010-ae964133715d"}},"connectionId":3,"connectionCount":3}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:04.304+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn3","msg":"client metadata","attr":{"remote":"172.21.0.1:49250","client":"conn3","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.102.1-microsoft-standard-WSL2"},"platform":"'Node.js v16.17.0, LE (unified)","version":"3.6.8|5.13.2"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"CONTROL",  "id":23377,   "ctx":"SignalHandler","msg":"Received signal","attr":{"signal":15,"error":"Terminated"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"CONTROL",  "id":23378,   "ctx":"SignalHandler","msg":"Signal was sent by kill(2)","attr":{"pid":0,"uid":0}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"CONTROL",  "id":23381,   "ctx":"SignalHandler","msg":"will terminate after current cmd ends"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"SignalHandler","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"SignalHandler","msg":"Attempting to enter quiesce mode"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"-",        "id":6371601, "ctx":"SignalHandler","msg":"Shutting down the FLE Crud thread pool"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"SignalHandler","msg":"Shutting down the MirrorMaestro"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"SignalHandler","msg":"Shutting down the WaitForMajorityService"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"SignalHandler","msg":"Shutting down the LogicalSessionCache"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.442+00:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"SignalHandler","msg":"Shutdown: going to close listening sockets"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"NETWORK",  "id":23017,   "ctx":"listener","msg":"removing socket file","attr":{"path":"/tmp/mongodb-27017.sock"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"SignalHandler","msg":"Shutting down the global connection pool"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"SignalHandler","msg":"Shutting down the FlowControlTicketholder"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"SignalHandler","msg":"Stopping further Flow Control ticket acquisitions."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"CONTROL",  "id":4784908, "ctx":"SignalHandler","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"SignalHandler","msg":"Shutting down the ReplicationCoordinator"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"SignalHandler","msg":"Shutting down the ShardingInitializationMongoD"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"SignalHandler","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"-",        "id":4784912, "ctx":"SignalHandler","msg":"Killing all operations for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"-",        "id":4695300, "ctx":"SignalHandler","msg":"Interrupted all currently running operations","attr":{"opsKilled":4}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"TENANT_M", "id":5093807, "ctx":"SignalHandler","msg":"Shutting down all TenantMigrationAccessBlockers on global shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"TenantMigrationBlockerNet","msg":"Killing all outstanding egress activity."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"ASIO",     "id":6529201, "ctx":"SignalHandler","msg":"Network interface redundant shutdown","attr":{"state":"Stopped"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"SignalHandler","msg":"Killing all outstanding egress activity."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"SignalHandler","msg":"Shutting down all open transactions"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"SignalHandler","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"SignalHandler","msg":"Shutting down the IndexBuildsCoordinator"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"SignalHandler","msg":"Shutting down the ReplicaSetMonitor"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"SignalHandler","msg":"Shutting down the MigrationUtilExecutor"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"SignalHandler","msg":"Shutting down the ServiceEntryPoint"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"SignalHandler","msg":"Shutting down the HealthLog"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"SignalHandler","msg":"Shutting down the TTL monitor"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.443+00:00"},"s":"I",  "c":"INDEX",    "id":3684100, "ctx":"SignalHandler","msg":"Shutting down TTL collection monitor thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"SignalHandler","msg":"Finished shutting down TTL collection monitor thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"SignalHandler","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"SignalHandler","msg":"Acquiring the global lock for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"SignalHandler","msg":"Shutting down the storage engine"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"SignalHandler","msg":"Shutting down journal flusher thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"SignalHandler","msg":"Finished shutting down journal flusher thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"SignalHandler","msg":"Shutting down checkpoint thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"SignalHandler","msg":"Finished shutting down checkpoint thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.444+00:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"SignalHandler","msg":"Timestamp monitor shutting down"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.445+00:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"SignalHandler","msg":"Deregistering all the collections"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.445+00:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"SignalHandler","msg":"WiredTigerKVEngine shutting down"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.445+00:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"SignalHandler","msg":"Shutting down session sweeper thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.445+00:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"SignalHandler","msg":"Finished shutting down session sweeper thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.445+00:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"SignalHandler","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,use_timestamp=false,"}}
+[36mmy-redis-container  | [0m1:signal-handler (1703731052) Received SIGTERM scheduling shutdown...
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.448+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn1","msg":"Connection ended","attr":{"remote":"172.21.0.1:49238","uuid":{"uuid":{"$uuid":"8f361bb7-21f9-42ca-a2f7-009db2bade3b"}},"connectionId":1,"connectionCount":2}}
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:32.473 * User requested shutdown...
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:32.473 * Calling fsync() on the AOF file.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:32.475 * Saving the final RDB snapshot before exiting.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:32.502 * DB saved on disk
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:32.502 # Redis is now ready to exit, bye bye...
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.511+00:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"SignalHandler","msg":"WiredTiger closed","attr":{"durationMillis":66}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.511+00:00"},"s":"I",  "c":"STORAGE",  "id":22279,   "ctx":"SignalHandler","msg":"shutdown: removing fs lock..."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.511+00:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"SignalHandler","msg":"Dropping the scope cache for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.511+00:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"SignalHandler","msg":"Shutting down full-time diagnostic data capture"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.516+00:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"SignalHandler","msg":"Now exiting"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:32.516+00:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"SignalHandler","msg":"Shutting down","attr":{"exitCode":0}}
+[36mmy-redis-container exited with code 0
+[0m[36mmy-redis-container exited with code 0
+[0m[33mmongo-1 exited with code 0
+[0m]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker compose -f docker-compose.dev.yml updown[2Pup
+[33mWARN[0m[0000] Found orphan containers ([todo-backend-app-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Network todo-backend_default    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ ⠋ Container my-redis-container    Creating                                                                                                [34m0.0s [0m
+ ⠋ Container todo-backend-mongo-1  Creating                                                                                                [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [32m✔[0m Network todo-backend_default    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ ⠙ Container my-redis-container    Creating                                                                                                [34m0.1s [0m
+ ⠙ Container todo-backend-mongo-1  Creating                                                                                                [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Network todo-backend_default    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ [32m✔[0m Container my-redis-container    [32mCreated[0m                                                                                                 [34m0.1s [0m
+ [32m✔[0m Container todo-backend-mongo-1  [32mCreated[0m                                                                                                 [34m0.2s [0m
+[?25hAttaching to my-redis-container, mongo-1
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:37:38.213 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:37:38.214 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:37:38.214 * Redis version=7.2.3, bits=64, commit=00000000, modified=0, pid=1, just started
+[36mmy-redis-container  | [0m1:C 28 Dec 2023 02:37:38.214 * Configuration loaded
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.214 * monotonic clock: POSIX clock_gettime
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.214 * Running mode=standalone, port=6379.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.215 * Server initialized
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.215 * Reading RDB base file on AOF loading...
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.216 * Loading RDB produced by version 7.2.3
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.216 * RDB age 67 seconds
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.216 * RDB memory usage when created 0.83 Mb
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.216 * RDB is base AOF
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.216 * Done loading RDB, keys loaded: 0, keys expired: 0.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.216 * DB loaded from base file appendonly.aof.1.base.rdb: 0.001 seconds
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.219 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.003 seconds
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.219 * DB loaded from append only file: 0.004 seconds
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.219 * Opening AOF incr file appendonly.aof.1.incr.aof on server start
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:38.219 * Ready to accept connections tcp
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.279+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.281+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":21},"outgoing":{"minWireVersion":6,"maxWireVersion":21},"isInternalClient":true}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.282+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"TENANT_M", "id":7091600, "ctx":"main","msg":"Starting TenantMigrationAccessBlockerRegistry"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"d4cdd69c2689"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"7.0.4","gitVersion":"38f3e37057a43d2e9f41a39142681a76062d582e","openSSLVersion":"OpenSSL 3.0.2 15 Mar 2022","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2204","distarch":"x86_64","target_arch":"x86_64"}}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"22.04"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.285+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"},"security":{"authorization":"enabled"}}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.287+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.287+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.287+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=3407M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.951+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":664}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.951+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.967+00:00"},"s":"W",  "c":"CONTROL",  "id":22178,   "ctx":"initandlisten","msg":"/sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'","tags":["startupWarnings"]}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.967+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":262144,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.969+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":21},"outgoing":{"minWireVersion":6,"maxWireVersion":21},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":21,"maxWireVersion":21},"outgoing":{"minWireVersion":21,"maxWireVersion":21},"isInternalClient":true}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.969+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"7.0","context":"startup"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.969+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.971+00:00"},"s":"I",  "c":"CONTROL",  "id":6608200, "ctx":"initandlisten","msg":"Initializing cluster server parameters from disk"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.971+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.974+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.977+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.977+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.979+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.979+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:38.979+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.709+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.22.0.1:49266","uuid":{"uuid":{"$uuid":"71ed9dee-8937-4082-a3de-89553de5e407"}},"connectionId":1,"connectionCount":1}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.715+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.22.0.1:49266","client":"conn1","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.102.1-microsoft-standard-WSL2"},"platform":"'Node.js v16.17.0, LE (unified)","version":"3.6.8|5.13.2"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.719+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.22.0.1:49272","uuid":{"uuid":{"$uuid":"c74575b8-d11e-4327-8923-40e727694911"}},"connectionId":2,"connectionCount":2}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.721+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"172.22.0.1:49272","client":"conn2","doc":{"driver":{"name":"nodejs|Mongoose","version":"3.6.8"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.10.102.1-microsoft-standard-WSL2"},"platform":"'Node.js v16.17.0, LE (unified)","version":"3.6.8|5.13.2"}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.723+00:00"},"s":"I",  "c":"ACCESS",   "id":6788604, "ctx":"conn2","msg":"Auth metrics report","attr":{"metric":"acquireUser","micros":0}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.733+00:00"},"s":"I",  "c":"ACCESS",   "id":5286306, "ctx":"conn2","msg":"Successfully authenticated","attr":{"client":"172.22.0.1:49272","isSpeculative":true,"isClusterMember":false,"mechanism":"SCRAM-SHA-256","user":"the_username","db":"the_database","result":0,"metrics":{"conversation_duration":{"micros":10430,"summary":{"0":{"step":1,"step_total":2,"duration_micros":179},"1":{"step":2,"step_total":2,"duration_micros":23}}}},"extraInfo":{}}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:41.735+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn2","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":1}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:49.348+00:00"},"s":"I",  "c":"-",        "id":20883,   "ctx":"conn1","msg":"Interrupted operation as its client disconnected","attr":{"opId":55}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:49.348+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn2","msg":"Connection ended","attr":{"remote":"172.22.0.1:49272","uuid":{"uuid":{"$uuid":"c74575b8-d11e-4327-8923-40e727694911"}},"connectionId":2,"connectionCount":1}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:49.350+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn1","msg":"Connection ended","attr":{"remote":"172.22.0.1:49266","uuid":{"uuid":{"$uuid":"71ed9dee-8937-4082-a3de-89553de5e407"}},"connectionId":1,"connectionCount":0}}
+[36mmy-redis-container  | [0m1:signal-handler (1703731072) Received SIGTERM scheduling shutdown...
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.693+00:00"},"s":"I",  "c":"CONTROL",  "id":23377,   "ctx":"SignalHandler","msg":"Received signal","attr":{"signal":15,"error":"Terminated"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.693+00:00"},"s":"I",  "c":"CONTROL",  "id":23378,   "ctx":"SignalHandler","msg":"Signal was sent by kill(2)","attr":{"pid":0,"uid":0}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.693+00:00"},"s":"I",  "c":"CONTROL",  "id":23381,   "ctx":"SignalHandler","msg":"will terminate after current cmd ends"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.693+00:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"SignalHandler","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.693+00:00"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"SignalHandler","msg":"Attempting to enter quiesce mode"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.694+00:00"},"s":"I",  "c":"-",        "id":6371601, "ctx":"SignalHandler","msg":"Shutting down the FLE Crud thread pool"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.694+00:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"SignalHandler","msg":"Shutting down the MirrorMaestro"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.694+00:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"SignalHandler","msg":"Shutting down the WaitForMajorityService"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.694+00:00"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"SignalHandler","msg":"Shutting down the LogicalSessionCache"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"SignalHandler","msg":"Shutdown: going to close listening sockets"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"NETWORK",  "id":23017,   "ctx":"listener","msg":"removing socket file","attr":{"path":"/tmp/mongodb-27017.sock"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"SignalHandler","msg":"Shutting down the global connection pool"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"SignalHandler","msg":"Shutting down the FlowControlTicketholder"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"SignalHandler","msg":"Stopping further Flow Control ticket acquisitions."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"CONTROL",  "id":4784908, "ctx":"SignalHandler","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"SignalHandler","msg":"Shutting down the ReplicationCoordinator"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"SignalHandler","msg":"Shutting down the ShardingInitializationMongoD"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"SignalHandler","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"-",        "id":4784912, "ctx":"SignalHandler","msg":"Killing all operations for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"-",        "id":4695300, "ctx":"SignalHandler","msg":"Interrupted all currently running operations","attr":{"opsKilled":3}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"TENANT_M", "id":5093807, "ctx":"SignalHandler","msg":"Shutting down all TenantMigrationAccessBlockers on global shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"TenantMigrationBlockerNet","msg":"Killing all outstanding egress activity."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"ASIO",     "id":6529201, "ctx":"SignalHandler","msg":"Network interface redundant shutdown","attr":{"state":"Stopped"}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"SignalHandler","msg":"Killing all outstanding egress activity."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"SignalHandler","msg":"Shutting down all open transactions"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"SignalHandler","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"SignalHandler","msg":"Shutting down the IndexBuildsCoordinator"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"SignalHandler","msg":"Shutting down the ReplicaSetMonitor"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.695+00:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"SignalHandler","msg":"Shutting down the MigrationUtilExecutor"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"SignalHandler","msg":"Shutting down the ServiceEntryPoint"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"SignalHandler","msg":"Shutting down the HealthLog"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"SignalHandler","msg":"Shutting down the TTL monitor"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"INDEX",    "id":3684100, "ctx":"SignalHandler","msg":"Shutting down TTL collection monitor thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"SignalHandler","msg":"Finished shutting down TTL collection monitor thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"SignalHandler","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"SignalHandler","msg":"Acquiring the global lock for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"SignalHandler","msg":"Shutting down the storage engine"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"SignalHandler","msg":"Shutting down journal flusher thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"SignalHandler","msg":"Finished shutting down journal flusher thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"SignalHandler","msg":"Shutting down checkpoint thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"SignalHandler","msg":"Finished shutting down checkpoint thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"SignalHandler","msg":"Timestamp monitor shutting down"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"SignalHandler","msg":"Deregistering all the collections"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"SignalHandler","msg":"WiredTigerKVEngine shutting down"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"SignalHandler","msg":"Shutting down session sweeper thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.697+00:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"SignalHandler","msg":"Finished shutting down session sweeper thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.700+00:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"SignalHandler","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,use_timestamp=false,"}}
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.715 * User requested shutdown...
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.715 * Calling fsync() on the AOF file.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.718 * Saving the final RDB snapshot before exiting.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.741 * DB saved on disk
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.741 # Redis is now ready to exit, bye bye...
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"SignalHandler","msg":"WiredTiger closed","attr":{"durationMillis":88}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"STORAGE",  "id":22279,   "ctx":"SignalHandler","msg":"shutdown: removing fs lock..."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"SignalHandler","msg":"Dropping the scope cache for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"SignalHandler","msg":"Shutting down full-time diagnostic data capture"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.791+00:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"SignalHandler","msg":"Now exiting"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.791+00:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"SignalHandler","msg":"Shutting down","attr":{"exitCode":0}}
+[36mmy-redis-container exited with code 0
+[0m[36mmy-re

@@ -60,4 +60,60 @@ Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git restore <file
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   script-answers/exercise12_2.txt[m
+	[31mmodified:   script-answers/exercise12_3.txt[m
+	[31mmodified:   script-answers/exercise12_4.txt[m
+	[31mmodified:   script-answers/exercise12_8.txt[m
+	[31mmodified:   todo-app/todo-backend/app.js[m
+	[31mmodified:   todo-app/todo-backend/docker-compose.dev.yml[m
+	[31mmodified:   todo-app/todo-backend/routes/index.js[m
+	[31mmodified:   todo-app/todo-backend/routes/todos.js[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mscript-answers/exercise12_11.txt[m
+	[31mtodo-app/todo-backend/mongo_data/[m
+	[31mtodo-app/todo-backend/routes/statistic.js[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ j[Kgit add a[K.
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+fatal: adding files failed
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add script-answers/exercise12_11.txt
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git commit -m 'par[K[K[Kpart 12 exercises 12.9 - 12.11'
+[main 7b5cc09] part 12 exercises 12.9 - 12.11
+ Committer: danieljjyuen <dan@LAPTOP-AP8VLLC3.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 63 insertions(+)
+ create mode 100644 script-answers/exercise12_11.txt
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git push -u origin main
+Username for 'https://github.com': danieljjyuen
+Password for 'https://danieljjyuen@github.com': 
+Enumerating objects: 6, done.
+Counting objects:  16% (1/6)Counting objects:  33% (2/6)Counting objects:  50% (3/6)Counting objects:  66% (4/6)Counting objects:  83% (5/6)Counting objects: 100% (6/6)Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 2.47 KiB | 2.47 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/danieljjyuen/part12-containers-applications.git
+   c860ca4..7b5cc09  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ docker compose -f docker-compose.dev.yml down
+stat /home/dan/src/part12-containers-applications/docker-compose.dev.yml: no such file or directory
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[0
