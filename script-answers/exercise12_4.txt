@@ -6101,4 +6101,29 @@ b370a0bed8f2   hello-world          "/hello"                 6 days ago       Ex
 [33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"SignalHandler","msg":"Finished shutting down TTL collection monitor thread"}
 [33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"SignalHandler","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
 [33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"SignalHandler","msg":"Acquiring the global lock for shutdown"}
-[33mmongo
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"SignalHandler","msg":"Shutting down the storage engine"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"SignalHandler","msg":"Shutting down journal flusher thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"SignalHandler","msg":"Finished shutting down journal flusher thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"SignalHandler","msg":"Shutting down checkpoint thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"SignalHandler","msg":"Finished shutting down checkpoint thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"SignalHandler","msg":"Timestamp monitor shutting down"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"SignalHandler","msg":"Deregistering all the collections"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"SignalHandler","msg":"WiredTigerKVEngine shutting down"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.696+00:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"SignalHandler","msg":"Shutting down session sweeper thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.697+00:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"SignalHandler","msg":"Finished shutting down session sweeper thread"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.700+00:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"SignalHandler","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,use_timestamp=false,"}}
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.715 * User requested shutdown...
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.715 * Calling fsync() on the AOF file.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.718 * Saving the final RDB snapshot before exiting.
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.741 * DB saved on disk
+[36mmy-redis-container  | [0m1:M 28 Dec 2023 02:37:52.741 # Redis is now ready to exit, bye bye...
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"SignalHandler","msg":"WiredTiger closed","attr":{"durationMillis":88}}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"STORAGE",  "id":22279,   "ctx":"SignalHandler","msg":"shutdown: removing fs lock..."}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"SignalHandler","msg":"Dropping the scope cache for shutdown"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.788+00:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"SignalHandler","msg":"Shutting down full-time diagnostic data capture"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.791+00:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"SignalHandler","msg":"Now exiting"}
+[33mmongo-1             | [0m{"t":{"$date":"2023-12-28T02:37:52.791+00:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"SignalHandler","msg":"Shutting down","attr":{"exitCode":0}}
+[36mmy-redis-container exited with code 0
+[0m[36mmy-redis-container exited with code 0
+[0m[33mmongo-1 exited with code 0
+[0m]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications/todo-app/todo-backend[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications/todo-app/todo-backend[00m$ docker compose -f docker-compose.dev.yml updown[23Pnt

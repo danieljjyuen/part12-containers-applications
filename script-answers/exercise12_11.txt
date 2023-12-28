@@ -116,4 +116,105 @@ To https://github.com/danieljjyuen/part12-containers-applications.git
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 ]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ docker compose -f docker-compose.dev.yml down
 stat /home/dan/src/part12-containers-applications/docker-compose.dev.yml: no such file or directory
-]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[0
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ ls
+[0m[01;34mscript-answers[0m  [01;34mtodo-app[0m
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add .
+warning: could not open directory 'todo-app/todo-backend/redis_data/appendonlydir/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+fatal: adding files failed
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git commit -m 'part 12 exercise 12.11[K2'
+warning: could not open directory 'todo-app/todo-backend/redis_data/appendonlydir/': Permission denied
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   script-answers/exercise12_11.txt[m
+	[31mmodified:   script-answers/exercise12_2.txt[m
+	[31mmodified:   script-answers/exercise12_3.txt[m
+	[31mmodified:   script-answers/exercise12_4.txt[m
+	[31mmodified:   script-answers/exercise12_8.txt[m
+	[31mmodified:   todo-app/todo-backend/.gitignore[m
+	[31mmodified:   todo-app/todo-backend/app.js[m
+	[31mmodified:   todo-app/todo-backend/docker-compose.dev.yml[m
+	[31mmodified:   todo-app/todo-backend/routes/index.js[m
+	[31mmodified:   todo-app/todo-backend/routes/todos.js[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtodo-app/todo-backend/mongo_data/[m
+	[31mtodo-app/todo-backend/redis_data/[m
+	[31mtodo-app/todo-backend/routes/statistic.js[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git comm[K[K[K[K[K[K[K[Kgit add todo-[K[K[K[K[K[K .
+warning: could not open directory 'todo-app/todo-backend/redis_data/appendonlydir/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+fatal: adding files failed
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add --ignore-errors .
+warning: could not open directory 'todo-app/todo-backend/redis_data/appendonlydir/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+error: open("todo-app/todo-backend/mongo_data/WiredTiger.lock"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger.lock'
+error: open("todo-app/todo-backend/mongo_data/WiredTiger.turtle"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger.turtle'
+error: open("todo-app/todo-backend/mongo_data/WiredTiger.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger.wt'
+error: open("todo-app/todo-backend/mongo_data/WiredTigerHS.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTigerHS.wt'
+error: open("todo-app/todo-backend/mongo_data/_mdb_catalog.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/_mdb_catalog.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-0--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-0--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-10--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-10--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-2--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-2--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-4--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-4--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-7--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-7--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-1--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-1--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-11--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-11--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-3--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-3--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-5--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-5--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-6--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-6--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-8--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-8--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-9--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-9--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/mongod.lock"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/mongod.lock'
+error: open("todo-app/todo-backend/mongo_data/sizeStorer.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/sizeStorer.wt'
+error: open("todo-app/todo-backend/mongo_data/storage.bson"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/storage.bson'
+error: open("todo-app/todo-backend/redis_data/dump.rdb"): Permission denied
+error: unable to index file 'todo-app/todo-backend/redis_data/dump.rdb'
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git commit -m 'a[Kpart 12 exercise 12.12'
+[main 64d124d] part 12 exercise 12.12
+ Committer: danieljjyuen <dan@LAPTOP-AP8VLLC3.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --
