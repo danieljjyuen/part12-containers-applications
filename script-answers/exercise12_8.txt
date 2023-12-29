@@ -208,4 +208,92 @@ Delta compression using up to 8 threads
 Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
 Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 3.38 KiB | 3.38 MiB/s, done.
 Total 4 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/danieljjyuen/part12-containers-applications.git
+   c6a6cf7..c860ca4  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ ls
+[0m[01;34mscript-answers[0m  [01;34mtodo-app[0m
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git add .
+warning: could not open directory 'todo-app/todo-backend/redis_data/appendonlydir/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+fatal: adding files failed
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git[K[K[Kgit add . --ignore-errors
+warning: could not open directory 'todo-app/todo-backend/redis_data/appendonlydir/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/.mongodb/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/journal/': Permission denied
+warning: could not open directory 'todo-app/todo-backend/mongo_data/diagnostic.data/': Permission denied
+error: open("todo-app/todo-backend/mongo_data/WiredTiger"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger'
+error: open("todo-app/todo-backend/mongo_data/WiredTiger.lock"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger.lock'
+error: open("todo-app/todo-backend/mongo_data/WiredTiger.turtle"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger.turtle'
+error: open("todo-app/todo-backend/mongo_data/WiredTiger.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTiger.wt'
+error: open("todo-app/todo-backend/mongo_data/WiredTigerHS.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/WiredTigerHS.wt'
+error: open("todo-app/todo-backend/mongo_data/_mdb_catalog.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/_mdb_catalog.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-0--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-0--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-10--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-10--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-2--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-2--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-4--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-4--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/collection-7--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/collection-7--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-1--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-1--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-11--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-11--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-3--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-3--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-5--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-5--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-6--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-6--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-8--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-8--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/index-9--562525074694158409.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/index-9--562525074694158409.wt'
+error: open("todo-app/todo-backend/mongo_data/mongod.lock"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/mongod.lock'
+error: open("todo-app/todo-backend/mongo_data/sizeStorer.wt"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/sizeStorer.wt'
+error: open("todo-app/todo-backend/mongo_data/storage.bson"): Permission denied
+error: unable to index file 'todo-app/todo-backend/mongo_data/storage.bson'
+error: open("todo-app/todo-backend/redis_data/dump.rdb"): Permission denied
+error: unable to index file 'todo-app/todo-backend/redis_data/dump.rdb'
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git commit -m ' p[K[Kpart 12 exercises 12.13'
+[main fc4e871] part 12 exercises 12.13
+ Committer: danieljjyuen <dan@LAPTOP-AP8VLLC3.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 143 insertions(+), 2 deletions(-)
+ create mode 100644 todo-app/todo-frontend/Dockerfile
+]0;dan@LAPTOP-AP8VLLC3: ~/src/part12-containers-applications[01;32mdan@LAPTOP-AP8VLLC3[00m:[01;34m~/src/part12-containers-applications[00m$ git push -u origin main
+Username for 'https://github.com': danieljjyuen
+Password for 'https://danieljjyuen@github.com': 
+Enumerating objects: 14, done.
+Counting objects:   7% (1/14)Counting objects:  14% (2/14)Counting objects:  21% (3/14)Counting objects:  28% (4/14)Counting objects:  35% (5/14)Counting objects:  42% (6/14)Counting objects:  50% (7/14)Counting objects:  57% (8/14)Counting objects:  64% (9/14)Counting objects:  71% (10/14)Counting objects:  78% (11/14)Counting objects:  85% (12/14)Counting objects:  92% (13/14)Counting objects: 100% (14/14)Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects:  12% (1/8)Compressing objects:  25% (2/8)Compressing objects:  37% (3/8)Compressing objects:  50% (4/8)Compressing objects:  62% (5/8)Compressing objects:  75% (6/8)Compressing objects:  87% (7/8)Compressing objects: 100% (8/8)Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 1.59 KiB | 1.59 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas
