@@ -7,7 +7,7 @@ services:
     volumes:
       - ./todo-frontend/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
     environment:
-      - REACT_APP_BACKEND_URL=http://localhost:3000/
+      - REACT_APP_BACKEND_URL=http://localhost:8080/api
   server:
       image: todo-backend-image
       volumes:
